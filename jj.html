@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🦖</title>
+    <title>Moving Dinosaur and Heart</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-image: url(''); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            color: white;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
             text-align: center;
-            padding: 50px;
+            margin-top: 20px;
         }
-        h1 {
-            font-size: 100px;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 20px;
-            line-height: 1.5;
-        }
-        .message {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 10px;
-            display: inline-block;
+        .dino {
+            font-size: 40px;
+            position: relative;
+            animation: move 5s infinite;
         }
         .heart {
-            color: red;
             font-size: 40px;
+            color: red;
+            position: relative;
+            animation: beat 2s infinite;
         }
-        footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
+        @keyframes move {
+            0% { left: 0; }
+            50% { left: 50%; }
+            100% { left: 0; }
+        }
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="message">
-        <h1></h1>
-        <p> 🦖🦖🦖🦖🦖🦖🦖🦖 </p>
-        <p class="heart">🦖🦖🦖🦖🦖🦖</p>
-    </div>
-    <footer>
-        <p>With all my 🦖, forever and always 🦖.</p>
-    </footer>
+
+<div class="container">
+    <h2>Text Message: Hello, World! 🌎</h2>
+    <span class="dino">🦖</span>
+    <span class="heart">❤️</span>
+    <img src="your-image-url.jpg" alt="Your Image">
+</div>
+
+<script>
+    // Simple script to change the text message after 5 seconds
+    setTimeout(function() {
+        document.querySelector('h2').innerText = 'New Message: How are you? 😊';
+    }, 5000);
+</script>
+
 </body>
 </html>
