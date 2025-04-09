@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,18 +46,33 @@
 <body>
 
 <div class="container">
-    <h2>Text Message: Hello, World! 🌎</h2>
+    <h2 id="message">Text Message: Hello my 🌎</h2>
     <span class="dino">🦖</span>
     <span class="heart">❤️</span>
-    <img src="your-image-url.jpg" alt="Your Image">
+    <h3 id="newMessage"></h3>
 </div>
 
 <script>
-    // Simple script to change the text message after 5 seconds
+    // Simple script to change the text message after 3 seconds
     setTimeout(function() {
-        document.querySelector('h2').innerText = 'New Message: How are you? 😊';
-    }, 5000);
+        document.getElementById('message').innerText = 'New Message: How are you? 😊';
+    }, 3000);
+    // Simple script to change the text message after 6 seconds
+    setTimeout(function() {
+        document.getElementById('message').innerText = 'New Message: I love you';
+    }, 6000);
+    
+    setTimeout(function() {
+        document.getElementById('message').innerText = 'Happy Monthsary love!!(Bukas) testing ko lang to hahahh';
+    }, 8000);
+
+    
+    
+    
 </script>
 
-</body>
-</html>
+
+
+
+
+
